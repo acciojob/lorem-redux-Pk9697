@@ -7,17 +7,17 @@ import Posts from './Posts'
 
 const App = () => {
 	const dispatch = useDispatch()
-	const { posts,isLoading } = useSelector((state) => state)
+	const { posts, isLoading } = useSelector((state) => state)
 
 	useEffect(() => {
 		dispatch(fetchPosts())
 	}, [])
 	return (
-    <div>
-      <h1>A short Narration of Lorem Ipsum</h1>
-      {isLoading && <h4>Loading...</h4>}
-      <Posts posts={posts}/>
-    </div>
+		<div>
+			<h1>A short Narration of Lorem Ipsum</h1>
+			<h4>{isLoading && 'Loading...'}</h4>
+			<Posts posts={posts} />
+		</div>
 	)
 }
 

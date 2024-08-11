@@ -3,9 +3,9 @@ import React from 'react'
 function Post({ post = {} }) {
 	return (
 		<li className='post'>
-			<h1>
+			<p className='title'>
 				<strong>Title:</strong> {post.title}
-			</h1>
+			</p>
 			<p>
 				<strong>Body:</strong> {post.body}
 			</p>
