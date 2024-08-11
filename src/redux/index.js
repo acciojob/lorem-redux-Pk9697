@@ -12,13 +12,14 @@ const initialState = {
 const fetchPostsStart = () => {
 	return {
 		type: FETCH_POSTS_START,
+		posts: [],
 	}
 }
 
 const fetchPostsSuccess = (data) => {
 	return {
 		type: FETCH_POSTS_SUCCESS,
-		payload:data
+		payload: data,
 	}
 }
 

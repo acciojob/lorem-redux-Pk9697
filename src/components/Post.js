@@ -6,7 +6,7 @@ function Post({ post = {} }) {
 			<p className='title'>
 				<strong>Title :</strong>{post.title}
 			</p>
-			<p>
+			<p className='body'>
 				<strong>Body :</strong>{post.body}
 			</p>
 		</li>
