@@ -3,21 +3,21 @@ import './../styles/App.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchPosts } from '../redux'
 import Post from './Post'
+import Posts from './Posts'
 
 const App = () => {
 	const dispatch = useDispatch()
-	const { posts } = useSelector((state) => state)
+	const { posts,isLoading } = useSelector((state) => state)
 
 	useEffect(() => {
 		dispatch(fetchPosts())
 	}, [])
 	return (
-		<div className='posts'>
-			{/* Do not remove the main div */}
-			{posts.map((post) => (
-				<Post key={post.id} post={post} />
-			))}
-		</div>
+    <div>
+      <h1>A short Narration of Lorem Ipsum</h1>
+      {isLoading && <h4>Loading...</h4>}
+      <Posts posts={posts}/>
+    </div>
 	)
 }
 
