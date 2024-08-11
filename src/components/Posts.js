@@ -5,7 +5,9 @@ function Posts({ posts = [], isLoading = false }) {
 	return (
 		<ul className='posts'>
 			{isLoading ? (
-				<li>Loading...</li>
+				<li>
+					<p className='title'>Loading...</p>
+				</li>
 			) : (
 				posts.map((post) => <Post key={post.id} post={post} />)
 			)}
