@@ -2,13 +2,18 @@ import React from 'react'
 import Post from './Post'
 
 function Posts({ posts = [], isLoading = false }) {
-	return (
-		<ul className='posts'>
-			{isLoading && (
-				<li>
+	if (isLoading) {
+		return (
+			<ul className='posts'>
+				<li className='post'>
 					<p className='title'>Loading...</p>
 				</li>
-			)}
+			</ul>
+		)
+	}
+
+	return (
+		<ul className='posts'>
 			{posts.map((post) => (
 				<Post key={post.id} post={post} />
 			))}
