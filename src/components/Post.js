@@ -4,10 +4,10 @@ function Post({ post = {} }) {
 	return (
 		<li className='post'>
 			<p className='title'>
-				<strong>Title:</strong> {post.title}
+				<strong>Title :</strong>{post.title}
 			</p>
 			<p>
-				<strong>Body:</strong> {post.body}
+				<strong>Body :</strong>{post.body}
 			</p>
 		</li>
 	)
