@@ -1,13 +1,14 @@
 import React from 'react'
 import Post from './Post'
 
-function Posts({ posts = [] }) {
+function Posts({ posts = [], isLoading = false }) {
 	return (
 		<ul className='posts'>
-			{/* Do not remove the main div */}
-			{posts.map((post) => (
-				<Post key={post.id} post={post} />
-			))}
+			{isLoading ? (
+				<li>Loading...</li>
+			) : (
+				posts.map((post) => <Post key={post.id} post={post} />)
+			)}
 		</ul>
 	)
 }

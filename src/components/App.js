@@ -20,7 +20,7 @@ const App = () => {
 				Below Contains A title and Body gotten froma random API, Please take
 				your time to Review
 			</h4>
-			{isLoading ? <h4>Loading...</h4> : <Posts posts={posts} />}
+			<Posts isLoading={isLoading} posts={posts} />
 		</div>
 	)
 }
