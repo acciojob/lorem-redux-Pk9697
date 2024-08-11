@@ -4,13 +4,14 @@ import Post from './Post'
 function Posts({ posts = [], isLoading = false }) {
 	return (
 		<ul className='posts'>
-			{isLoading ? (
+			{isLoading && (
 				<li>
 					<p className='title'>Loading...</p>
 				</li>
-			) : (
-				posts.map((post) => <Post key={post.id} post={post} />)
 			)}
+			{posts.map((post) => (
+				<Post key={post.id} post={post} />
+			))}
 		</ul>
 	)
 }

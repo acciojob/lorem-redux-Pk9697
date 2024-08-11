@@ -15,7 +15,6 @@ const App = () => {
 	return (
 		<div>
 			<h1>A short Naration of Lorem Ipsum</h1>
-			{/* <h4>{isLoading && 'Loading...'}</h4> */}
 			<h4>
 				Below Contains A title and Body gotten froma random API, Please take
 				your time to Review
